@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
+
+    <title>Shero Test</title>
+</head>
+<body>
+    <main class="main">
+        <div class="grid-container">
+            <div class="grid-item-1"><img src="photo/1.png" alt="1" ></div>
+            <div class="grid-item-2"><img src="photo/2.png" alt="2" ></div>
+            <div class="grid-item-3"><img src="photo/2.png" alt="3" ></div>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item"><img src="photo/4.png" alt="4"></div>
+            <div class="flex-item"><img src="photo/4.png" alt="4"></div>
+            <div class="flex-item"><img src="photo/4.png" alt="4"></div>
+            <div class="flex-item"><img src="photo/4.png" alt="4"></div>
+            <div class="flex-item"><img src="photo/4.png" alt="4"></div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="container">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide"><img src="photo/4.png" alt="4"></li>
+                    <li class="glide__slide"><img src="photo/5.png" alt="5"></li>
+                    <li class="glide__slide"><img src="photo/6.png" alt="6"></li>
+                    <li class="glide__slide"><img src="photo/7.png" alt="7"></li>
+                    <li class="glide__slide"><img src="photo/8.png" alt="8"></li>
+                    <li class="glide__slide"><img src="photo/4.png" alt="4"></li>
+                    <li class="glide__slide"><img src="photo/5.png" alt="5"></li>
+                    <li class="glide__slide"><img src="photo/6.png" alt="6"></li>
+                    <li class="glide__slide"><img src="photo/7.png" alt="7"></li>
+                    <li class="glide__slide"><img src="photo/8.png" alt="8"></li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left btn" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script >
+        const config = {
+            type: 'carousel',
+            perView: 4,
+            breakpoints : {
+                1024: {
+                    perView: 3
+                },
+                600: {
+                    perView: 2
+                },
+                300: {
+                    perView: 1
+                }
+            }
+        }
+        new Glide('.glide', config).mount()
+      </script>
+</body>
+</html>
